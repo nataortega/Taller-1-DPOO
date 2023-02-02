@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * Esta clase tiene la información sobre un país y sus atletas.
+ * Esta clase tiene la información sobre un país y sus atletas
  */
 public class Pais
 {

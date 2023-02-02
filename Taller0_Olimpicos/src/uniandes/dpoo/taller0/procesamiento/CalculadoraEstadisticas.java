@@ -66,7 +66,6 @@ public class CalculadoraEstadisticas
 	// ************************************************************************
 	// Métodos
 	// ************************************************************************
-
 	/**
 	 * Calcula cuáles fueron los atletas que participaron en cada evento para el año
 	 * indicado
@@ -75,7 +74,29 @@ public class CalculadoraEstadisticas
 	 * @return Un mapa donde las llaves son los nombres de los eventos y los valores
 	 *         son los atletas que participaron en cada evento
 	 */
-	public Map<String, List<Atleta>> atletasPorAnio(int anio)
+	public Map<String, String> paisDelAtleta(String nombreAtleta)
+	{
+		Map<String, String> resultado = new HashMap<String, String>();
+
+		for (Evento unAtleta : atletas)
+		{
+			if (unAtleta.darNombre() == nombreAtleta)
+			{
+				resultado.put(unAtleta.darNombre(), unAtleta.darPais());
+			}
+		}
+
+		return resultado;
+	}
+	/**
+	 * Calcula cuáles fueron los atletas que participaron en cada evento para el año
+	 * indicado
+	 * 
+	 * @param anio En año que se quiere consultar
+	 * @return Un mapa donde las llaves son los nombres de los eventos y los valores
+	 *         son los atletas que participaron en cada evento
+	 */
+	public Map<String, List<Atleta>> atletasPorAnio(String nombrePais)
 	{
 		Map<String, List<Atleta>> resultado = new HashMap<String, List<Atleta>>();
 
