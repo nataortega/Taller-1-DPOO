@@ -371,12 +371,12 @@ public class ConsolaOlimpicos
 	 */
 	private void ejecutarPaisDelAtleta()
 	{
-		System.out.println("\n" + "Medallas de un atleta en un periodo" + "\n");
+		System.out.println("\n" + "Pais de un atleta" + "\n");
 
 		String nombreAtleta = input("Ingrese el atleta de su interés");
-		Map<String, Pais> atletas = calculadora.paisDelAtleta(nombreAtleta);
-		Pais nombrePais =atletas.get(nombreAtleta);
-		System.out.println(nombreAtleta + " es del país" + nombrePais);
+		Map<String, String> atletas = calculadora.paisDelAtleta(nombreAtleta);
+		String nombrePais =atletas.get(nombreAtleta);
+		System.out.println(nombreAtleta + " es del país " + nombrePais);
 		
 	}
 
