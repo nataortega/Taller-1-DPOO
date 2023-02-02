@@ -10,6 +10,7 @@ import java.util.Map;
 
 import uniandes.dpoo.taller0.modelo.Atleta;
 import uniandes.dpoo.taller0.modelo.Genero;
+import uniandes.dpoo.taller0.modelo.Pais;
 import uniandes.dpoo.taller0.procesamiento.CalculadoraEstadisticas;
 import uniandes.dpoo.taller0.procesamiento.LoaderOlimpicos;
 
@@ -63,7 +64,7 @@ public class ConsolaOlimpicos
 				else if (opcion_seleccionada == 12 && calculadora != null)
 					ejecutarPorcentajeMedallistas();
 				else if (opcion_seleccionada == 13 && calculadora != null)
-					ejecutarPaisDelAtleta()
+					ejecutarPaisDelAtleta();
 				else if (opcion_seleccionada == 14)
 				{
 					System.out.println("Saliendo de la aplicación ...");
@@ -373,10 +374,9 @@ public class ConsolaOlimpicos
 		System.out.println("\n" + "Medallas de un atleta en un periodo" + "\n");
 
 		String nombreAtleta = input("Ingrese el atleta de su interés");
-		Map<String, String> atletas = calculadora.paisDelAtleta(nombreAtleta);
-		nombreATL = atletas.getKey()
-		nombrePais =atletas.getValue()
-		System.out.println(nombreATL + " es del país" + nombrePais);
+		Map<String, Pais> atletas = calculadora.paisDelAtleta(nombreAtleta);
+		Pais nombrePais =atletas.get(nombreAtleta);
+		System.out.println(nombreAtleta + " es del país" + nombrePais);
 		
 	}
 

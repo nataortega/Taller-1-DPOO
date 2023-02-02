@@ -74,11 +74,11 @@ public class CalculadoraEstadisticas
 	 * @return Un mapa donde las llaves son los nombres de los eventos y los valores
 	 *         son los atletas que participaron en cada evento
 	 */
-	public Map<String, String> paisDelAtleta(String nombreAtleta)
+	public Map<String, Pais> paisDelAtleta(String nombreAtleta)
 	{
-		Map<String, String> resultado = new HashMap<String, String>();
+		Map<String, Pais> resultado = new HashMap<String, Pais>();
 
-		for (Evento unAtleta : atletas)
+		for (Atleta unAtleta : atletas)
 		{
 			if (unAtleta.darNombre() == nombreAtleta)
 			{
@@ -96,7 +96,7 @@ public class CalculadoraEstadisticas
 	 * @return Un mapa donde las llaves son los nombres de los eventos y los valores
 	 *         son los atletas que participaron en cada evento
 	 */
-	public Map<String, List<Atleta>> atletasPorAnio(String nombrePais)
+	public Map<String, List<Atleta>> atletasPorAnio(int anio)
 	{
 		Map<String, List<Atleta>> resultado = new HashMap<String, List<Atleta>>();
 
