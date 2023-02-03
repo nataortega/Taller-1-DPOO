@@ -367,7 +367,7 @@ public class ConsolaOlimpicos
 		}
 	}
 	/**
-	 * Ejecuta la opción para consultar los atletas de un año.
+	 * Ejecuta la opción para consultar elpais de un atleta
 	 */
 	private void ejecutarPaisDelAtleta()
 	{

@@ -67,12 +67,12 @@ public class CalculadoraEstadisticas
 	// Métodos
 	// ************************************************************************
 	/**
-	 * Calcula cuáles fueron los atletas que participaron en cada evento para el año
+	 * Calcula cuál es el pais de un atleta
 	 * indicado
 	 * 
-	 * @param anio En año que se quiere consultar
-	 * @return Un mapa donde las llaves son los nombres de los eventos y los valores
-	 *         son los atletas que participaron en cada evento
+	 * @param nombre delatleta que se quiere consultar
+	 * @return Un mapa donde las llaves son los nombres de los atletas y los valores
+	 *         son el pais de ese atleta
 	 */
 	public Map<String, String> paisDelAtleta(String nombreAtleta)
 	{
